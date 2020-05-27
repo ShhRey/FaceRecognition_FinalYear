@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Attendance Portal</title>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='admin.css')}}">
+        <script type = "text/javascript" src = "{{ url_for('static', filename = 'admin.js') }}" ></script>
+    </head>
+    <body>
+        <ul>
+            <li><h1>Attendance Portal</h1></li>
+            <li style="margin-left: 130px;"><a style="text-decoration: none;" href="/logout"><button>Logout</button></a></li>
+        </ul>
+        <hr>
+        <div id="blk">
+            <button onclick="show()">Mark Attendance</button>
+            <button onclick="show1()">Retrieve Attendance</button>
+        </div>
+        <div id="formm" class="formm">
+            <form method="POST" action="{{url_for('mark')}}">
+                <label for="year">Choose Year: </label>
+                <select name="year" id="year">
+                    <option value="fe">FE</option>
+                    <option value="se">SE</option>
+                    <option value="te">TE</option>
+                    <option value="be">BE</option>
+                </select>
+                <label for="division">Choose Division: </label>
+                <select name="division" id="division">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                </select>
+                <label for="day">Choose Day: </label>
+                <select name="day" id="division">
+                    <option value="Monday">Monday</option>
+                    <option value="Tuesday">Tuesday</option>
+                    <option value="Wednesday">Wednesday</option>
+                    <option value="Thursday">Thursday</option>
+                    <option value="Friday">Friday</option>
+                </select>
+                <label for="time">Select Lecture Time:</label>
+                <select name="time">
+                    <option value="2">10-11</option>
+                    <option value="3">11-12</option>
+                    <option value="5">1-2</option>
+                    <option value="6">2-3</option>
+                    <option value="7">3-4</option>
+                    <option value="8">4-5</option>
+                </select>
+                <button type="submit">Submit</button>
+                <button type="button" style="width: fit-content; float: right;" onclick="hide()">Close</button>
+            </form>
+        </div>
+        <div id="formm1" class="formm">
+            <form method="POST" action="{{url_for('ret')}}">
+                <label for="year">Choose Year: </label>
+                <select name="year" id="year">
+                    <option value="FE">FE</option>
+                    <option value="sE">SE</option>
+                    <option value="TE">TE</option>
+                    <option value="BE">BE</option>
+                </select>
+                <label for="division">Choose Division: </label>
+                <select name="division" id="division">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                </select>
+                <center><h3 style="margin-to: 30px">OR</h3></center>
+                <input type="text" placeholder="Registration Number" name="regno">
+                <button type="submit">Submit</button>
+                <button type="button" style="width: fit-content; float: right;" onclick="hide()">Close</button>
+            </form>
+        </div>
+    </body>
+</html>

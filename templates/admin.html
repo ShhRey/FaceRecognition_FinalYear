@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Admin Portal</title>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='admin.css')}}">
+        <script type = "text/javascript" src = "{{ url_for('static', filename = 'admin.js') }}" ></script>
+    </head>
+    <body>
+        <ul>
+            <li><h1>Attendance Portal - Admin</h1></li>
+            <li><a style="text-decoration: none;" href="/logout"><button>Logout</button></a></li>
+        </ul>
+        <hr>
+        <div id="blk">
+            <button onclick="show()">Add a Student</button>
+            <form action="{{url_for('train')}}">
+                <button>Train Dataset</button>
+            </form>
+        </div>
+        <div class="formm" id="formm">
+            <form method="POST" action="{{url_for('addret')}}">
+                <input type="text" placeholder="Name" name="name">
+                <input type="text" placeholder="Registration Number" name="regno">
+                <label for="year">Choose Year: </label>
+                <select name="year" id="year">
+                    <option value="fe">fe</option>
+                    <option value="se">se</option>
+                    <option value="te">te</option>
+                    <option value="be">be</option>
+                </select>
+                <label for="division">Choose Division: </label>
+                <select name="division" id="division">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                </select>
+                <input type="tel" placeholder="Roll Number" name="rollno">
+                <input type="tel" placeholder="Contact Number" name="contactno">
+                <button type="submit">Submit</button>
+                <button type="button" style="width: fit-content; float: right;" onclick="hide()">Close</button>
+            </form>
+        </div>
+    </body>
+</html>
