@@ -1,0 +1,80 @@
+body, html{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    font-family: -apple-system,roboto,sans-serif,Arial;
+    margin-left: 20px;
+}
+
+button{
+    width: 200px;
+    height: 35px;
+    background: rgb(50, 116, 214);
+    color: white;
+    border-radius: 2px;
+    border: none;
+    font-family: -apple-system,roboto,sans-serif,Arial;
+    font-size: 15px;
+}
+
+button:hover{
+    cursor: pointer;
+    background: rgb(40, 104, 199);
+}
+
+ul{
+    list-style: none;
+    margin: auto;
+}
+
+ul>li{
+    display: inline-block;
+}
+
+ul>li>h1{
+    margin-right: 625px;
+}
+
+#blk>button{
+    margin: 40px 20px 40px 60px;
+    display: block;
+}
+
+.formm>form>input,select,button,label{
+    display: block;
+    margin: 5px;
+    font-family: -apple-system,roboto,sans-serif,Arial;
+    font-size: 15px;
+}
+
+.formm>form>input,select,label{
+    height: 25px;
+    min-width: 350px;
+    width: fit-content;
+}
+
+.formm>form>input,select{
+    border: 1px solid gray;
+    border-radius: 2px;
+}
+
+.formm>form>button{
+    display: inline-block;
+}
+
+.formm{
+    height: fit-content;
+    width: fit-content;
+    padding: 20px;
+    border: 1px solid gray;
+    margin-top: -11%;
+    margin-left: 37%;
+}
+
+#formm{visibility: hidden;}
+
+#formm1{
+    visibility: hidden;
+}
